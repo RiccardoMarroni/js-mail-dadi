@@ -15,7 +15,7 @@ let MailList = [
 const button = document.querySelector('.btn')
 
 button.addEventListener('click' , function(){
-    
+
     let usermail =  document.getElementById("userMail").value;
     let flag = false;
     for(let i=0; i<MailList.length; i++){
@@ -41,5 +41,24 @@ button.addEventListener('click' , function(){
 
 
 
+// DADI
 
-// document.getElementById('result').innerHTML = test;
+const btn = document.querySelector('.btn')
+
+btn.addEventListener('click' , function(){
+    var player = Math.floor(Math.random()*6) + 1;
+    var computer = Math.floor(Math.random()*6) + 1;
+    if (player > computer) {
+        document.getElementById('placeholder').className = 'hai vinto';
+        console.log('ciao')
+      }else if (player == computer) {
+        document.getElementById('placeholder').className = 'hai pareggiato';
+        console.log('ciao')
+      }else if(player < computer){
+        document.getElementById('placeholder').className = 'hai perso';
+        console.log('ciao')
+      }else{
+        
+      }
+
+})
