@@ -2,8 +2,7 @@
 // stampa dell'esito
 
 // MAIL
-let userword = "marroni.riccardo@gmail.com"
-let flag = false;
+
 
 let MailList = [
     "marroni.riccardo@gmail.com", 
@@ -12,22 +11,35 @@ let MailList = [
     "giorgio.sonnoli@mail.com"
 ]
 
-for(let i=0; i<MailList.length; i++){
-    if(userword == MailList[i]){
-        flag = true;
-    } else{
 
-    }
-}
- 
-if(flag){
-    console.log("mail valida")
-} else{
-    console.log("mail non valida")
-}
+const button = document.querySelector('.btn')
+
+button.addEventListener('click' , function(){
+    
+    let usermail =  document.getElementById("userMail").value;
+    let flag = false;
+    for(let i=0; i<MailList.length; i++){
+        if( usermail == MailList[i]){
+            flag = true;
+        } 
+      }
+      const result = document.getElementById('result');
+      if(flag){
+        result.innerHTML = "mail valida";
+      }
+      else {
+        result.innerHTML = "mail non valida";
+      }
+     
+    // if(flag){
+    //     console.log("mail valida")
+    // } else{
+    //     console.log("mail non valida")
+    // }
+    
+})
 
 
-// var test = ""
-// document.getElementById("userMail").value;
+
 
 // document.getElementById('result').innerHTML = test;
