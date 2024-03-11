@@ -43,19 +43,19 @@ button.addEventListener('click' , function(){
 
 // DADI
 
-const btn = document.querySelector('.btn')
+ const btn = document.querySelector('.dadi')
 
-btn.addEventListener('click' , function(){
+ btn.addEventListener('click' , function(){
     var player = Math.floor(Math.random()*6) + 1;
     var computer = Math.floor(Math.random()*6) + 1;
     if (player > computer) {
-        document.getElementById('placeholder').className = 'hai vinto';
+        document.getElementById('placeholder').innerHTML = 'hai vinto';
         console.log('ciao')
       }else if (player == computer) {
-        document.getElementById('placeholder').className = 'hai pareggiato';
+        document.getElementById('placeholder').innerHTML = 'hai pareggiato';
         console.log('ciao')
       }else if(player < computer){
-        document.getElementById('placeholder').className = 'hai perso';
+        document.getElementById('placeholder').innerHTML = 'hai perso';
         console.log('ciao')
       }else{
         
